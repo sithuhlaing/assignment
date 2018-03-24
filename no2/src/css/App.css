@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+label{
+  color: #eee;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #3C3B45;
+  height: 80px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+input[type]{
+  margin-right: 4px;
+}
+.button-primary:disabled{
+  background-color: #25242B !important;
+}
+/*/*/
+
+.coin-container{
+  background-color: #25242B;
+
+  text-align: left;
+
+  padding: 16px 16px 16px 16px;
+  margin-bottom: 24px;
+  /*width: 200px;*/
+  height: 350px;
+
+  border-radius: 6px;
+}
+.coin-container h1{
+  color: #686576;
+}
+.coin-container h3{
+  text-align: center;
+  color: white;
+}
+.coin-container p{
+  color: #686576;
+  font-size: 1.7rem;
+
+  margin-left: 8px;
+}
+/*/*/
+
+.expand-btn-container{
+  text-align: center;
+}
+#expand-btn{
+  color: white;
+  font-size: 1.5rem;
+  float: right;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.expand{
+  display: none;
+}
+/*/*/
+
+#coin-total {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-top: 24px;
+}
+/*/*/
+
+.red {
+  color: #f44336;
+}
+.b-red {
+  border-color: red;
+}
+
+.green {
+  color: #4caf50;
+}
+
+.white-f {
+  color: white;
+}

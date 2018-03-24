@@ -4,8 +4,8 @@ import React, {
 // import logo from './logo.svg';
 
 import Cookies from 'js-cookie';
-import CoinContainer from '../CoinContainer';
-import Helper from '../Helper';
+import CoinContainer from './component/CoinContainer';
+import Helper from './class/Helper';
 import './css/App.css';
 
 
@@ -117,11 +117,7 @@ class App extends Component {
 
       let coinContainers = feed.map(function(feed, i) {
           // change color of percentage numbers
-          let classes = {
-            change: getColor(feed.percent_change_1h),
-            market_cap_usd: getColor(feed.market_cap_usd),
-            last_updated: getColor(feed.last_updated)
-          }
+          let color = getColor(feed.percent_change_1h);
           let percent = {
             change: feed.percent_change_1h,
             market_cap_usd: feed.market_cap_usd,
@@ -139,7 +135,7 @@ class App extends Component {
             name = feed.name;
           }
           return (
-                <CoinContainer key={i} name={name} price_usd={feed.price_usd} classes={classes} percent={percent}>
+                <CoinContainer key={i} name={name} price_usd={feed.price_usd} color={color} percent={percent}>
                   {holdings}
                 </CoinContainer>
           );
@@ -183,6 +179,7 @@ class App extends Component {
           </div>
         </div>
         <img id="loading-gif" style={{display: 'block',margin: "0 auto"}} src="./loading.gif " alt="Loading..."></img>
+        <h1>Crypto Dashboard</h1>
         {this.renderSpinners()}
       </div>
     );
